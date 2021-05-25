@@ -1,0 +1,28 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>JSP - Hello!</title>
+    <!-- 1. 导入CSS的全局样式 -->
+    <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
+    <script src="${pageContext.request.contextPath}/js/jquery-2.1.0.min.js"></script>
+    <!-- 3. 导入bootstrap的js文件 -->
+    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        <c:if test="${message!=null}">
+        alert("系统提示：${message}");
+        </c:if>
+    </script>
+</head>
+<body>
+<h1><%= "Hello World!" %>
+</h1>
+<br/>
+<a href="${pageContext.request.contextPath}/login.jsp" style="text-decoration:none;font-size:33px">welcome to WeChat</a>
+</body>
+</html>
